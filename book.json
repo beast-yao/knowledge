@@ -1,0 +1,87 @@
+{
+    "author": "Devil",
+    "description": "JAVA学习笔记",
+    "extension": null,
+    "generator": "site",
+    "language": "zh-hans",
+  	"gitbook": "3.2.3",
+    "links": {
+        "sharing": {
+            "all": null,
+            "facebook": null,
+            "google": null,
+            "twitter": null,
+            "weibo": null
+        },
+        "sidebar": {
+            
+        }
+    },
+    "output": null,
+    "pdf": {
+        "fontSize": 12,
+        "footerTemplate": null,
+        "headerTemplate": null,
+        "margin": {
+            "bottom": 36,
+            "left": 62,
+            "right": 62,
+            "top": 36
+        },
+        "pageNumbers": false,
+        "paperSize": "a4"
+    },
+    "plugins": [
+    	"-search",
+    	"back-to-top-button",
+    	"chapter-fold",
+    	"expandable-chapters-small",
+    	"copy-code-button",
+    	"todo",
+    	"-lunr",
+    	"search-pro",
+    	"advanced-emoji",
+    	"splitter",
+    	"-sharing", 
+    	"sharing-plus",
+    	"-tbfed-pagefooter",
+    	"-change_girls",
+    	"pageview-count",
+    	"-popup"
+    ],
+    "pluginsConfig": {
+         "sharing": {
+           "douban": false,
+           "facebook": false,
+           "google": true,
+           "hatenaBookmark": false,
+           "instapaper": false,
+           "line": true,
+           "linkedin": true,
+           "messenger": false,
+           "pocket": false,
+           "qq": false,
+           "qzone": true,
+           "stumbleupon": false,
+           "twitter": false,
+           "viber": false,
+           "vk": false,
+           "weibo": true,
+           "whatsapp": false,
+           "all": [
+               "douban", "facebook", "google", "hatenaBookmark", 
+               "instapaper", "linkedin","twitter", "weibo", 
+               "messenger","qq", "qzone","viber","vk","weibo",
+               "pocket", "stumbleupon","whatsapp"
+           ]
+       },
+       "tbfed-pagefooter": {
+            "copyright":"Copyright &copy yao 2017",
+            "modify_label": "修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        }
+
+    },
+    "title": "JAVA学习笔记",
+    "variables": {}
+}
