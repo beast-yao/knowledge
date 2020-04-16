@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CompletableFuture · JAVA学习笔记</title>
+        <title>ThreadPool线程池 · JAVA学习笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -38,6 +38,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
                 
             
                 
@@ -157,21 +161,21 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="completableFuture.html">
+
+            </ul>
             
-                <a href="completableFuture.html">
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="ThreadPool.html">
+            
+                <a href="ThreadPool.html">
             
                     
-                    CompletableFuture
+                    ThreadPool线程池
             
                 </a>
             
 
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -205,7 +209,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >CompletableFuture</a>
+        <a href=".." >ThreadPool线程池</a>
     </h1>
 </div>
 
@@ -259,7 +263,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CompletableFuture","level":"1.2.2","depth":2,"previous":{"title":"Future和Callable","level":"1.2.1","depth":2,"path":"juc/future-he-callable.md","ref":"juc/future-he-callable.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-search","back-to-top-button","chapter-fold","expandable-chapters-small","copy-code-button","todo","-lunr","search-pro","advanced-emoji","splitter","-sharing","sharing-plus","-tbfed-pagefooter","-change_girls","-pageview-count","-popup","expandable-chapters","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy yao 2017","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","vk","weibo","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Devil","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"JAVA学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"3.2.3","description":"JAVA学习笔记","extension":null},"file":{"path":"juc/completableFuture.md","mtime":"2020-04-15T09:15:42.493Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-16T12:28:53.827Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ThreadPool线程池","level":"1.3","depth":1,"previous":{"title":"Future和Callable","level":"1.2.1","depth":2,"path":"juc/future-he-callable.md","ref":"juc/future-he-callable.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-search","back-to-top-button","chapter-fold","expandable-chapters-small","copy-code-button","todo","-lunr","search-pro","advanced-emoji","splitter","-sharing","sharing-plus","-tbfed-pagefooter","-change_girls","pageview-count","-popup","expandable-chapters","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy yao 2017","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"todo":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["douban","facebook","google","hatenaBookmark","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","vk","weibo","pocket","stumbleupon","whatsapp"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":true,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Devil","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"JAVA学习笔记","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"3.2.3","description":"JAVA学习笔记","extension":null},"file":{"path":"juc/ThreadPool.md","mtime":"2020-04-16T14:25:02.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-16T14:26:10.562Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -298,6 +302,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
         
     
         
