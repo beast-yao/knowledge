@@ -46,8 +46,10 @@
     	"sharing-plus",
     	"-tbfed-pagefooter",
     	"-change_girls",
-    	"pageview-count",
-    	"-popup"
+    	"-pageview-count",
+    	"-popup",
+    	"expandable-chapters",
+    	"code"
     ],
     "pluginsConfig": {
          "sharing": {
@@ -79,6 +81,9 @@
             "copyright":"Copyright &copy yao 2017",
             "modify_label": "修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "code":{
+        	"copyButtons": false
         }
 
     },
